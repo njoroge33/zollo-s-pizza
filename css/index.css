@@ -5,7 +5,7 @@
     margin: 0;
 }
 
-.navigation {
+.navigation, .footer {
     background-color: rgb(59, 3, 3);
 }
 
@@ -61,4 +61,25 @@ h1 {
 
 .carousel-caption>h3{
     color: blue;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.social>div {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.free>img {
+    height: 100px;
+    padding-top: 1%;
+}
+
+.footer>.logo>img {
+    padding-top: 1%;
+    width: 30%;
 }
