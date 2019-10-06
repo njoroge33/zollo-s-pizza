@@ -9,6 +9,7 @@
     background-color: rgb(59, 3, 3);
 }
 
+
 .logo>img {
     height: 100px;
     width: 15%;
@@ -16,21 +17,32 @@
 }
 
 .nav {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: end;
-}
-
-.nav>table {
-    text-align: center;
     margin-top: 5%;
-    width: 100%;
 }
 
-td>a, td, td>a:hover {
+p>a, p>a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    margin-left: 5%;
     cursor: pointer;
-    padding: 5%;
     font-weight: bolder;
     font-size: 18px;
-    text-decoration: none;
+} 
+
+.menu {
+    background-color: rgb(27, 1, 1);
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.menu td, th {
+    padding: 5px;
+}
+
+th {
+    background-color: rgb(59, 3, 3);
+    width: 100%;
 }
