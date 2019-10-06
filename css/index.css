@@ -15,3 +15,24 @@
     width: 15%;
     padding-bottom: 1%;
 }
+
+.nav {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: end;
+}
+
+.nav>table {
+    text-align: center;
+    margin-top: 5%;
+    width: 100%;
+}
+
+td>a, td, td>a:hover {
+    cursor: pointer;
+    padding: 5%;
+    font-weight: bolder;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
