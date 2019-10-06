@@ -7,7 +7,6 @@
 
 .navigation {
     background-color: rgb(59, 3, 3);
-    color: white;
 }
 
 .logo>img {
@@ -34,5 +33,4 @@ td>a, td, td>a:hover {
     font-weight: bolder;
     font-size: 18px;
     text-decoration: none;
-    color: white;
 }
