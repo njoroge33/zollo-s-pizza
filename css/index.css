@@ -83,3 +83,25 @@ h1 {
     padding-top: 1%;
     width: 30%;
 }
+
+.container {
+    background-color: rgb(59, 3, 3);
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.form, button, option, select{
+    background-color: rgb(27, 1, 1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form>div {
+    padding: 2%;
+}
+
+#out {
+    display: none;
+}
