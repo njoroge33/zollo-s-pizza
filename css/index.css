@@ -32,7 +32,7 @@ p {
     font-size: 18px;
 } 
 
-.menu {
+.menu, .about {
     background-color: rgb(27, 1, 1);
     margin-bottom: 1%;
     margin-top: 1%;
@@ -45,4 +45,8 @@ p {
 th {
     background-color: rgb(59, 3, 3);
     width: 100%;
+}
+
+h1 {
+    text-align: center;
 }
