@@ -1,4 +1,4 @@
-function getSize(type, size) {
+function getPriceSize (type, size){
     var chicken = [600, 800, 1200];
     var meaty = [550, 700, 1000];
     var vegetarian = [500, 600, 900];
@@ -11,6 +11,16 @@ function getSize(type, size) {
         return vegetarian[size];
     }
 }
+
+function getSize (size) {
+    if (size === 0) {
+        return "Small"
+    }else if (size === 1) {
+        return "Medium"
+    }else if (size === 2) {
+        return "large"
+    }
+} 
 
 $(document).ready(function () {
     $("#menu").click(function () {
@@ -30,7 +40,7 @@ $(document).ready(function () {
         var crust = parseInt($("input[name='crust']:checked").val());
         var toppings = parseInt($("input[name='topping']:checked").val());
         var amount = parseInt($("#number").val());
-        var total = (getSize(type, size) + crust + toppings) * amount;
+        var total = (getPriceSize(type, size) + crust + toppings) * amount;
 
         if (amount <= 0) {
             amount = 1
@@ -39,14 +49,17 @@ $(document).ready(function () {
         if (Number.isNaN(total) === true) {
             alert("CONFIRM ATLEAST YOU HAVE SELECTED ONE ITEM IN EACH SECTION!");
         } else {
-            $("#post").html("Total" + " : Kshs" + " " + total);
-            $("#out").show();
+            $("#post").append(`Your Pick: Type:${type} Size: ${getSize(size)}  Crust: Kshs ${crust} Toppings: Kshs ${toppings} Total: Kshs ${total}`);
+            $("#ok").show();
+            $("#cancel").show();
+            $('#submit').hide();
             $(".post").css('background-color', 'rgb(27, 1, 1)')
         }
     })
 
-    $("#out").click(function () {
+    $("#ok").click(function () {
         event.preventDefault();
+        $("#ok").hide();
         var deliver = confirm("Would you like us to deliver your order?");
 
         if (deliver) {
@@ -56,6 +69,12 @@ $(document).ready(function () {
         } else {
             alert("Collect your order at our outlet near you");
         }
-        setTimeout(function () { location.reload(); }, 5000);
+        setTimeout(function () { location.reload(); }, 10000);
+    })
+
+    $("#cancel").click(function () {
+        event.preventDefault();
+        setTimeout(function () { location.reload(); }, 100);
+
     })
 });

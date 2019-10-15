@@ -102,6 +102,6 @@ form>div {
     padding: 2%;
 }
 
-#out {
+#cancel, #ok {
     display: none;
 }
